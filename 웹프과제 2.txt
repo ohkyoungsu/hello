@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<style>
+#menu ul { margin = 0; padding : 0; wudtg : 567px; }
+#menu ul li { display : inline-block; list-style-type : none; padding : 0px 15px; }
+
+</style>
+</head>
+<body>
+<header>
+</header>
+<nav>
+<ul>
+<li><a href="">Home</a></li>
+<li><a href="">Basic</a></li>
+<li><a href="">History</a></li>
+<li><a href="">Plan</a></li>
+<li><a href="">Source</a></li>
+</ul>
+</nav>
+</body>
+</html>
