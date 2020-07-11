@@ -39,7 +39,7 @@ img.onload = function() {
     if (imgH > CanvasYSize) { y = CanvasYSize-imgH; }
     if (imgH > CanvasYSize) { clearY = imgH; }
     else { clearY = CanvasYSize; }
-    if (imgW > CanvasXSize) { clearX = imgW; 
+    if (imgW > CanvasXSize) { clearX = imgW; }
     else { clearX = CanvasXSize; }
     cty = document.getElementById('canvas').getContext('2d');
     return setInterval(draw, speed);
