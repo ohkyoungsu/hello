@@ -1,312 +1,64 @@
-<html>
-    <head>
+<html><head>
         <title>Dr. Hwang's Home</title>
         <meta charset="UTF-8">
         <meta name="generator" content="Namo WebEditor(Trial)">
         <link href="https://fonts.googleapis.com/css?family=Lora|Noto+Serif+KR" rel="stylesheet">
         <style>
-	@import url(../mystyle.css);
         p{font-size: 10pt; font-family: "Noto Serif KR", sans-serif; color: #363636;} 
         </style>
     </head>
 
-<body bgcolor=white lang=KO link=blue vlink=purple style='tab-interval:40.0pt'
-alink=red>
-
+<body bgcolor="white" lang="KO" link="blue" vlink="purple" style="tab-interval:40.0pt" alink="red" marginwidth="0" marginheight="0">
+<!-- 11장 파노라마 예제 응용 시작 부분-->
 <table width="612" height="694" cellpadding="0" cellspacing="0" bg-color="#FFCC00">
-    <tr>
-        <td width="612" height="573" bg-color="white">
-            <p style="font-size:15pt"><b>&nbsp;&nbsp;프로젝트</b></p>
+    <tbody><tr>
+        <td width="612" height="30" bg-color="white">
+            <p style="font-size:15pt"><b>&nbsp;&nbsp;프로젝트</b></p></td></tr>
+<tr><td width="612" height="660">
+    <canvas id="canvas" width="1100" height="700"></canvas>
+    <script>
+var img = new Image();
 
-<div>
-<table style='width:465pt'>
- <tr style='height:379.5pt'>
-  <td style='width:455.0pt;height:379.5pt'>
-  <table border=1 cellspacing=0 cellpadding=0 width="97%">
-   <tr>
-    <td width="56%">
-    <p align=center>제목</p> 
-    </td>
-    <td width="18%">
-    <p align=center>기간</p>
-    </td>
-    <td width="26%">
-    <p align=center>지원 기관</p>
-    </td>
-   </tr>
+img.src = 'table001.jpg';
+var CanvasXSize = 1100;
+var CanvasYSize = 700;
+var speed = 50;
+var scale = 1.05;
+var y = -4.5;
+var dy = 0.75;
+var imgW;
+var imgH;
+var x = 0;
+var clearX;
+var clearY;
+var cty;
 
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>스마트 컴퓨팅 환경에서 신뢰성 향상을 위한<br>데이터 보호 기술</p>
-    </td>
-    <td>
-    <p align=center>2020. 3. 1 ~<br> 2023. 2.28</p>
-    </td>
-    <td>
-    <p align=center>과학기술정보통신부</p>
-    </td>
-   </tr>
+img.onload = function() {
+    imgW = img.width*scale;
+    imgH = img.height*scale;
+    if (imgH > CanvasYSize) { y = CanvasYSize-imgH; }
+    if (imgH > CanvasYSize) { clearY = imgH; }
+    else { clearY = CanvasYSize; }
+    if (imgW > CanvasXSize) { clearX = imgW; 
+    else { clearX = CanvasXSize; }
+    cty = document.getElementById('canvas').getContext('2d');
+    return setInterval(draw, speed);
+}
 
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>인더스트리 4.0을 위한 <br>프라이버시 보호 기술 및 블록체인 개발<br>(연구 책임자: Wai Kong Lee)</p>
-    </td>
-    <td>
-    <p align=center>2019. 9. 1 ~<br> 2023.12.31</p>
-    </td>
-    <td>
-    <p align=center>과학기술정보통신부</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>기계학습 기반 비정상 시그너처 분석 시스템<br>(연구 책임자: 배영준)</p>
-    </td>
-    <td>
-    <p align=center>2018.12. 1 ~<br> 2019.11.30</p>
-    </td>
-    <td>
-    <p align=center>중소벤처기업부</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>초소형 저전력 방화벽 시스템 개발<br>(연구 책임자: 배영준)</p>
-    </td>
-    <td>
-    <p align=center>2017.12. 1 ~<br> 2018.11.30</p>
-    </td>
-    <td>
-    <p align=center>중소벤처기업부</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>효율적인 다중 그룹 메시지 브로드캐스트 암호 연구<br>(연구 책임자: 김인태)</p>
-    </td>
-    <td>
-    <p align=center>2017.11. 1 ~<br> 2018.10.31</p>
-    </td>
-    <td>
-    <p align=center>한국연구재단</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>함수 암호 및 응용 연구</p>
-    </td>
-    <td>
-    <p align=center>2017. 3. 1 ~<br> 2020. 2.29</p>
-    </td>
-    <td>
-    <p align=center>한국연구재단	</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>빅데이터 기반 침입 탐지 최적화 기술 개발</p>
-    </td>
-    <td>
-    <p align=center>2016.1 ~<br> 2016.12</p>
-    </td>
-    <td>
-    <p align=center>정보통신기술 진흥센터</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>전자영수증 처리, 분석 시스템</p>
-    </td>
-    <td>
-    <p align=center>2015.10 ~<br> 2016. 7</p>
-    </td>
-    <td>
-    <p align=center>정보통신기술 진흥센터</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>사이버 보안 인력 양성 및 보안 최적화 기술 개발<br>(침입탐지 최적화를 위한 사이버 보안 기술 개발)</p>
-    </td>
-    <td>
-    <p align=center>2014.12 ~<br> 2015. 12</p>
-    </td>
-    <td>
-    <p align=center>정보통신산업진흥원</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>스마트 홈 구축을 위한 <span>IoT</span> 보안 기술 개발</p>
-    </td>
-    <td>
-    <p align=center>2014.11 ~<br> 2017.4</p>
-    </td>
-    <td>
-    <p align=center>한국연구재단</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>네트워크 중심전을 지원하는 술어 암호 연구</p>
-    </td>
-    <td>
-    <p align=center>2013.09.17 ~<br> 2015.12.15</p>
-    </td>
-    <td>
-    <p align=center>국방과학연구소</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>창의적 사고와 협동 체험을 기반으로 하는 스마트폰 앱 개발 교육 프로그램</p>
-    </td>
-    <td>
-    <p align=center>2013.6.25 ~<br> 2014.3.24</p>
-    </td>
-    <td>
-    <p align=center>한국과학창의재단</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>아이디 기반 암호 및 사이버 보안 응용 연구</p>
-    </td>
-    <td>
-    <p align=center>2012.5 ~<br> 2015.4</p>
-    </td>
-    <td>
-    <p align=center>한국연구재단</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>군집 로봇의 협업을 통한 목표물 탐색 및 통신 경로 구축</p>
-    </td>
-    <td>
-    <p align=center>2012.5 ~<br> 2013.3</p>
-    </td>
-    <td>
-    <p align=center>한국과학창의재단</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>스마트그리드 보안 아키텍쳐 및 정보보호 대책 연구</p>
-    </td>
-    <td>
-    <p align=center>2011.5 ~<br> 2011.11</p>
-    </td>
-    <td>
-    <p align=center>한국인터넷진흥원</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>스마트 모니터를 위한 자동 제어 시스템 개발</p>
-    </td>
-    <td>
-    <p align=center>2011.4 ~<br> 2012.2</p>
-    </td>
-    <td>
-    <p align=center>중소기업청 창업진흥원</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>스마트 모니터 제어를 위한 알고리듬 개발</p>
-    </td>
-    <td>
-    <p align=center>2011.4 ~<br> 2011.8</p>
-    </td>
-    <td>
-    <p align=center>충청남도 경제진흥원</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>상용 <span>S/W</span> 보안 취약점 분석 기술 연구</p>
-    </td>
-    <td>
-    <p align=center>2011.2 ~<br> 2011.11</p>
-    </td>
-    <td>
-    <p align=center>한국정보보호학회<br>암호연구회</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center><span>IT</span> 융합형 프로그래머블 창의 로봇 설계 교과목 개발</p>
-    </td>
-    <td>
-    <p align=center>2010.11 ~<br> 2011.10</p>
-    </td>
-    <td>
-    <p align=center>한국연구재단</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>목디스크 예방을 위한 모니터 자동 제어 연구</p>
-    </td>
-    <td>
-    <p align=center>2010.7 ~<br> 2011.1</p>
-    </td>
-    <td>
-    <p align=center>한국과학창의재단</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>전장에서의 브로드캐스트 암호 및 타원 곡선 연구</p>
-    </td>
-    <td>
-    <p align=center>2009.6 ~<br> 2011.12</p>
-    </td>
-    <td>
-    <p align=center>국방과학연구소</p>
-    </td>
-   </tr>
-
-   <tr style='mso-yfti-irow:1;height:43.5pt'>
-    <td>
-    <p align=center>차세대 <span>DRM</span>을 위한 접근 제어 기법 연구</p>
-    </td>
-    <td>
-    <p align=center>2009.5 ~<br> 2012.4</p>
-    </td>
-    <td>
-    <p align=center>한국연구재단</p>
-    </td>
-   </tr>
-  </table>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal><span lang=EN-US style='color:windowtext'><o:p>&nbsp;</o:p></span></p>
-
-</div>
-
-</body>
-
-</html>
+function draw() {
+    cty.clearRect(0,0,clearX,clearY);
+    if (imgH <= CanvasYSize) {
+        if (y > (CanvasYSize)) { y = 0; }
+        if (y > (CanvasYSize-imgH)) { cty.drawImage(img,y-CanvasYSize+1,x,imgW,imgH); }
+    }
+    else {
+        if (y > (CanvasYSize)) { y = CanvasYSize-imgH; }
+        if (y > (CanvasYSize-imgH)) { cty.drawImage(img,y-imgH+1,x,imgW,imgH); }
+    }
+    cty.drawImage(img,x,y,imgW,imgH);
+    y += dy;
+}
+    </script></td></tr>
+</tbody></table>
+<!-- 11장 파노라마 예제 응용 종료 부분-->	
+</body></html>
