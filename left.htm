@@ -38,5 +38,23 @@
 </head>
 <body marginwidth="10" marginheight="14" onload="init()">
     <div id="div">시간확인</div>
+    <p id="p" onmouseover="starttimer(5000)" onmouseout="cancel()"> 모의 해킹 사이트 모음 </p>
+    <!-- 예제 10-3 적용 시작 부분-->
+    <script>
+        var timeis = null;
+        function starttimer(time) {
+        timeris = settimeout ("load("https://hack-cracker.tistory.com/41")", time);
+        document.getElementById("p").title = "이동하려 하는 중";
+        }
+        function cancel(){
+        if(timeris = null){
+            clearTimeout(timeris);
+            timeis = null;
+        }}
+        function load(url){
+            window.location = url;
+        }
+    </script>
+    <!-- 예제 10-3 적용 종료 부분-->
 </body>
 </html>
