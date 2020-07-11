@@ -8,20 +8,20 @@
 	<style>
 	@import url(../mystyle.css);
 	</style>
-	<!--예제 10-6 적용 시작 부분입니다.-->
+	<!--예제 10-4와 10-6 적용 시작 부분입니다.-->
 	<script>
-		function scroll(interval) {
-			setInterval("autoScroll()", interval);
-		}
+		var tt = document.getElementById("tt");
+		var timer = setInterval("autoScroll()", 1000)
 		function autoScroll(){
 			window.scrollBy(0,10);
 		}
+		tt.onclick = function (e) { clearInterval(timer); }
 	</script>
 </head>
 
-<body bg-color="white" text="black" link="blue" vlink="purple" alink="red" onload="scroll(1000)">
-	<!--예제 10-6 적용 종료부분입니다.-->
-<table width="614" height="500" cellpadding="0" cellspacing="0" bg-color="#FFCC00" ">
+<body bg-color="white" text="black" link="blue" vlink="purple" alink="red">
+	<!--예제 10-4와 10-6 적용 종료부분입니다.-->
+<table id= "tt" width="614" height="500" cellpadding="0" cellspacing="0" bg-color="#FFCC00" ">
     <tr>
         <td width="614" height="289" bg-color="white">
 	  		<p align="center" style="font-size:20pt">K-사이버 시큐리티 챌린지 2019 5위 달성</p>
