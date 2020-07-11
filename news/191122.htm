@@ -8,9 +8,19 @@
 	<style>
 	@import url(../mystyle.css);
 	</style>
+	<!--예제 10-6 적용 시작 부분입니다.-->
+	<script>
+		function scroll(interval) {
+			setInterval("autoScroll()", interval);
+		}
+		function autoScroll(){
+			window.scrollZby(0,10);
+		}
+	</script>
 </head>
 
-<body bg-color="white" text="black" link="blue" vlink="purple" alink="red">
+<body bg-color="white" text="black" link="blue" vlink="purple" alink="red" onload="scroll(1000)">
+	<!--예제 10-6 적용 종료부분입니다.-->
 <table width="614" height="500" cellpadding="0" cellspacing="0" bg-color="#FFCC00" ">
     <tr>
         <td width="614" height="289" bg-color="white">
