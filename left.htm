@@ -4,7 +4,7 @@
     <style>
         div { background: yellow;  width: 200px; }
     </style>
- <!-- 예제 10-4 적용 시작 부분-->
+ <!-- 예제 7-5,7-6, 10-4 적용 시작 부분-->
     <script>
        let state = true;
        var div;
@@ -17,8 +17,13 @@
                 Clock = setInterval("get_time()", 1000);
                 div.style.color = "black";
             } else {
-                div.style.color = "gray";
                 clearInterval(Clock);
+                if(date.getDay() == 0){
+                    div.style.color = "red";}
+                else if(date.getDay() == 6){
+                    div.style.color = "blue";}
+                else{
+                   div.style.color = "gray"; }
             }
             });
         }
@@ -27,7 +32,7 @@
             let text = date.toLocaleString();
             div.innerHTML = text;
         }
-<!-- 예제 10-4 적용 종료 부분-->
+<!-- 예제 7-5,7-6, 적용 종료 부분-->
 </script>
 </head>
 <body marginwidth="10" marginheight="14" onload="init()">
