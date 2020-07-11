@@ -8,24 +8,24 @@
     <style>
 	@import url(../mystyle.css);
     </style>
+    <script>
+	function draw1() {
+	  var sel = document.getElementById("book");
+	  var img = document.getElementById("bookimage");
+	  img.src = sel.options[sel.selectedIndex].value;
+	}
+    </script>
 </head>
 
 <body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
-<table width="614" height="500" cellpadding="0" cellspacing="0" bgcolor="#FFCC00" style="line-height:150%; margin-top:0; margin-bottom:0;">
-    <tr>
-        <td width="614" height="289" bgcolor="white">
-	  <p style="line-height:150%; margin-top:0; margin-bottom:0"><img src="171121_1.jpg" style="max-width: 100%; height: auto;"></p>
-	  <p style="line-height:150%; margin-top:0; margin-bottom:0"><img src="171121_2.jpg" style="max-width: 100%; height: auto;"></p>
-	  <br>
-	  <p style="text-align:left; line-height:150%; style='font-size:11.0pt"><a href="sample_chapter.pdf" target="_blank"><font size="3">서문, 목차 및 샘플 실습</font></a></p>
-	  <p style="text-align:left; line-height:150%; style='font-size:11.0pt"><a href="experiment_20171219.zip" target="_blank"><font size="3">실습 자료(분할1)</font></a></p>
-	  <p style="text-align:left; line-height:150%; style='font-size:11.0pt"><a href="experiment_20171219.z01" target="_blank"><font size="3">실습 자료(분할2)</font></a></p>
-	  <p style="text-align:left; line-height:150%; style='font-size:11.0pt"><a href="https://www.booksr.co.kr/html/book/book.asp?seq=697041" target="_blank"><font size="3">강의 자료(생릉출판사)</font></a></p>
-	  <p style="text-align:left; line-height:150%; style='font-size:11.0pt">교재 관련 질의 응답 및 기타 자료는 </font><a href="http://cafe.daum.net/securitybook" target="_blank"><span>http://cafe.daum.net/securitybook</span></a>을 참조 바랍니다.</p>
-        </td>
-    </tr>
-</table>
-<p>&nbsp;</p>
+<form>
+<select id="book" onchange="draw1()">
+<option value="media/pg1.jpg" selected>1쪽
+<option value="media/pg2.jpg">2쪽
+<option value="media/pg3.jpg">3쪽
+</select>
+<img id="bookimage" src="media/pg1.jpg" alt="">
+</form>
+<input type="button" value="프린트" onclick="print()">
 </body>
-
 </html>
