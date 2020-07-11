@@ -9,9 +9,21 @@
 	@import url(mystyle.css);
 	a{text-decoration:none}
     </style>
+	<script>
+		var p = new Array();
+		function init() {
+			for(i = 0; i < 13; i++){
+		p[i] = document.getElemenByID("p" + i);
+		p[i].onmouseover = function () {
+			this.style.backgroundColor = "orchid";
+		};
+		p[i].addEventListenr("mouseout", function () { this.style.backgroundColor = "default";} );}
+		}
+	</script>
 </head>
 
-<body bgcolor="white" text="black" link="black" vlink="black" alink="black">
+<body bgcolor="white" text="black" link="black" vlink="black" alink="black" onload="init">
+
 <table width="580" height="100%" cellpadding="0" cellspacing="0">
     <tr>
         <td width="580" height="248" colspan="2" align="left" valign="top">
@@ -21,21 +33,21 @@
     <tr>
         <td width="334" height="259" align="left" valign="top">
             <p><font size="4"><b>NEWS</b></font></p>
-            <p style="font-size:9pt;">&nbsp;&nbsp;<a href="news/200618.htm" target="main">K-시큐리티 챌린지 참여 학생 </a></p>
-            <p style="font-size:9pt;">&nbsp;&nbsp;<a href="news/171115.htm" target="main">2017년도 정보보호 및 기계학습 연구실 오픈 랩 행사</a></p>
-            <p style="font-size:9pt;">&nbsp;&nbsp;<a href="news/160323.htm" target="main">2016년도 정보보호 및 기계학습 연구실 오픈 랩 행사</a></p>
-            <p style="font-size:9pt;">&nbsp;&nbsp;<a href="news/131118.htm" target="main">2013 국가암호공모전 특별상 수상</a></p>
-            <p style="font-size:9pt;">&nbsp;&nbsp;<a href="news/130521.htm" target="main">리눅스 소개 및 실습</a></p>
-            <p style="font-size:9pt;">&nbsp;&nbsp;<a href="news/120910.htm" target="main">랩원모집공고 - 2012년 09월</a></p>
-            <p style="font-size:9pt;">&nbsp;&nbsp;<a href="http://news.donga.com/3/all/20111011/40996059/1" target="_blank">해킹 늘자 대학 정보보안학과 상한가</a></p>
+            <p id = "p0" style="font-size:9pt;">&nbsp;&nbsp;<a href="news/200618.htm" target="main">K-시큐리티 챌린지 참여 학생 </a></p>
+            <p id = "p1" style="font-size:9pt;">&nbsp;&nbsp;<a href="news/171115.htm" target="main">2017년도 정보보호 및 기계학습 연구실 오픈 랩 행사</a></p>
+            <p id = "p2" style="font-size:9pt;">&nbsp;&nbsp;<a href="news/160323.htm" target="main">2016년도 정보보호 및 기계학습 연구실 오픈 랩 행사</a></p>
+            <p id = "p3" style="font-size:9pt;">&nbsp;&nbsp;<a href="news/131118.htm" target="main">2013 국가암호공모전 특별상 수상</a></p>
+            <p id = "p4" style="font-size:9pt;">&nbsp;&nbsp;<a href="news/130521.htm" target="main">리눅스 소개 및 실습</a></p>
+            <p id = "p5" style="font-size:9pt;">&nbsp;&nbsp;<a href="news/120910.htm" target="main">랩원모집공고 - 2012년 09월</a></p>
+            <p id = "p6" style="font-size:9pt;">&nbsp;&nbsp;<a href="http://news.donga.com/3/all/20111011/40996059/1" target="_blank">해킹 늘자 대학 정보보안학과 상한가</a></p>
         </td>
         <td width="246" height="259" align="left" valign="top">
-            <p style='text-align:left'><b><font size="4" >공지사항</font></b></p>
-            <p style="font-size:9pt;"><a href="dxd2014/notice/131224.htm" target="main">프로그램 교육장 교통 안내</a></p>
-            <p style="font-size:9pt;"><a href="dxd2014/notice/131119.htm" target="main">프로그램 신청방법</a></p>
-            <p style="font-size:9pt;"><a href="steam/notice/130717(3).htm" target="main">2013 대한민국 교육기부박람회참가</a></p>
-            <p style="font-size:9pt;"><a href="steam/notice/130717(2).htm" target="main">프로그램 후원업체 모집</a></p>
-            <p style="font-size:9pt;"><a href="steam/notice/130717.htm" target="main">프로그램 문의 및 제안</a></p>
+            <p id = "p7" style='text-align:left'><b><font size="4" >공지사항</font></b></p>
+            <p id = "p8" style="font-size:9pt;"><a href="dxd2014/notice/131224.htm" target="main">프로그램 교육장 교통 안내</a></p>
+            <p id = "p9" style="font-size:9pt;"><a href="dxd2014/notice/131119.htm" target="main">프로그램 신청방법</a></p>
+            <p id = "p10" style="font-size:9pt;"><a href="steam/notice/130717(3).htm" target="main">2013 대한민국 교육기부박람회참가</a></p>
+            <p id = "p11" style="font-size:9pt;"><a href="steam/notice/130717(2).htm" target="main">프로그램 후원업체 모집</a></p>
+            <p id = "p12" style="font-size:9pt;"><a href="steam/notice/130717.htm" target="main">프로그램 문의 및 제안</a></p>
         </td>
-    </tr>
+    </tr>; 
 </table>
