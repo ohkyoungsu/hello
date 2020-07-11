@@ -11,7 +11,8 @@
     </style>
 	<!-- 9-4 적용 시작 부분-->
 	<script>
-	  var p0 = document.getElementById("p0")
+	  function init() {
+	  var p = document.getElementById("p0")
 	  var p1 = document.getElementById("p1")
 	  var p2 = document.getElementById("p2")
 	  var p3 = document.getElementById("p3")
@@ -24,11 +25,11 @@
 	  var p10 = document.getElementById("p10")
 	  var p11 = document.getElementById("p11")
 	  var p12 = document.getElementById("p12")
-	  function init() {
-		p0.onmouseover = function () {
+	  
+		p.onmouseover = function () {
 			this.style.backgroundColor = "orchid";
 		};
-		p0.addEventListenr("mouseout", function () { this.style.backgroundColor = "white";} );
+		p.addEventListenr("mouseout", function () { this.style.backgroundColor = "white";} );
 		
 		p1.onmouseover = function () {
 			this.style.backgroundColor = "orchid";
