@@ -10,15 +10,16 @@
 	a{text-decoration:none}
     </style>
 	<script>
+	  function init() {
 		var p = new Array();
-		function init() {
-			for(i = 0; i < 13; i++){
-		p[i] = document.getElemenByID("p" + i);
+		for(i =0; i < 13; i++){
+			p[i] = document.getElemenByID("p" + i);
 		p[i].onmouseover = function () {
 			this.style.backgroundColor = "orchid";
 		};
+		
 		p[i].addEventListenr("mouseout", function () { this.style.backgroundColor = "default";} );}
-		}
+	  }
 	</script>
 </head>
 
