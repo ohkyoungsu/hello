@@ -10,6 +10,7 @@
        var div;
        var Clock = setInterval("get_time()", 1000);
         function init() {
+            var ho = new Date();
             div = document.getElementById("div");
             div.addEventListener("click", function () { 
             state = !state;
@@ -18,9 +19,9 @@
                 div.style.color = "black";
             } else {
                 clearInterval(Clock);
-                if(date.getDay() == 0){
+                if(ho.getDay() == 0){
                     div.style.color = "red";}
-                else if(date.getDay() == 6){
+                else if(ho.getDay() == 6){
                     div.style.color = "blue";}
                 else{
                    div.style.color = "gray"; }
