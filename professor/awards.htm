@@ -16,6 +16,8 @@
 <script>
  function f(e) {
      var count = null;
+     var text;
+     var aaa = document.ElementById("aaa");
      var p = new Array();
      var hi = new Array();
      p[0] = "<p>2019.11 대한전자공학회 컴퓨터소사이어티 공로상</p>";
@@ -34,20 +36,22 @@
         count = 1;
         hi = p.sort();
         for(i=0; i < hi.length; i++)
-        {document.write(hi[i]);}
+        {text += hi[i];}
+        aaa.innerHTML = text;
         alert(e.type + "되어 거꾸로 정렬되었습니다.");
-         document.write("<button onclick='f(event)'>다시정렬하기</button>");
      }
      else{
         count = null;
         hi = p.reverse();
         for(i=0; i < hi.length; i++)
-        {document.write(hi[i]);}
+        {text += hi[i];}
+        aaa.innerHTML = text;
         alert(e.type + "되어 정렬되었습니다.");
      }}
 </script>
 <p style="font-size:15pt"><b>&nbsp;&nbsp;수상 관련 실적</b></p>
 <button onclick="f(event)">목록보기</button>
+    <p id="aaa></p>
     <!--예제 7.3, 7.4, 9.6 적용 종료 부분-->
 </body>
 
