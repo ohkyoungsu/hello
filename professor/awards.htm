@@ -11,27 +11,42 @@
 </head>
 
 <body bg-color="white" link="blue" vlink="purple" alink="red">
-<table width="614" height="450" cellpadding="0" cellspacing="0" bg-color="#FFCC00">
-    <tr>
-        <td width="614" height="450" bg-color="white">
-            <p style="font-size:15pt"><b>&nbsp;&nbsp;수상 관련 실적</b></p>
-            <p>&nbsp;&nbsp;2019.11 대한전자공학회 컴퓨터소사이어티 공로상</p>
-            <p>&nbsp;&nbsp;2019.11 대한전자공학회 논문상</p>
-            <p>&nbsp;&nbsp;2018.02 <span>ICGHIT</span> 2018 학회 최우수 논문상</p>
-            <p>&nbsp;&nbsp;2015.09 <span>Secure Korea</span> 대상 (개인부문) <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(국회과학기술혁신포럼·한국해킹보안협회 표창)</p>
-            <p>&nbsp;&nbsp;2011.09 <span>ICHIT</span> 2011 학회 최우수 논문상</p>
-            <p>&nbsp;&nbsp;2007.01 <span>IBC (International Biographical Centre)</span> 인명 사전 등재</p>
-            <p>&nbsp;&nbsp;2006.01 <span>ETRI Journal</span> 논문 우수상 (<span>ETRI</span> 원장 표창)</p>
-            <p>&nbsp;&nbsp;2005.12 <span>TTA</span> (한국정보통신기술협회) 표준화 논문 우수상 (<span>TTA</span> 사무총장 표창)</p>
-            <p>&nbsp;&nbsp;2005.10 <span>KSA</span> (한국표준협회) 표준화 논문 우수상 (산업자원부 장관 표창</p>
-            <p>&nbsp;&nbsp;2005.07 <span>IT</span> 분야 박사후 연수 과정 장학증서 (정보통신부 장관 표창)</p>
-            <p>&nbsp;&nbsp;2005.01 마르퀴즈 인명 사전 등재<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>(Marquis Who's Who In Science and Engineering)</span></p>
-            <p>&nbsp;&nbsp;2004.01 <span>ETRI Journal</span>논문 장려상 (<span>ETRI</span> 원장 표창)</p>
-        </td>
-    </tr>
-</table>
+    <p style="font-size:15pt"><b>&nbsp;&nbsp;수상 관련 실적</b></p>
+    <!--예제 7.3, 7.4, 9.6 적용 시작 부분-->
+<button onclick="f(event)">목록보기</button>
+<script>
+ function f(e) {
+     var count = null;
+     var p = new Array();
+     var hi = new Array();
+     p[0] = "<p>2019.11 대한전자공학회 컴퓨터소사이어티 공로상</p>"
+     p[1] = "<p>2019.11 대한전자공학회 논문상</p>"
+     p[2] = "<p>2018.02 <span>ICGHIT</span> 2018 학회 최우수 논문상</p>"
+     p[3] = "<p>2015.09 <span>Secure Korea</span> 대상 (개인부문) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(국회과학기술혁신포럼·한국해킹보안협회 표창)</p>"
+     p[4] = "<p>2011.09 <span>ICHIT</span> 2011 학회 최우수 논문상</p>"
+     p[5] = "<p>2007.01 <span>IBC (International Biographical Centre)</span> 인명 사전 등재</p>"
+     p[6] = "<p>2006.01 <span>ETRI Journal</span> 논문 우수상 (<span>ETRI</span> 원장 표창)</p>"
+     p[7] = "<p>2005.12 <span>TTA</span> (한국정보통신기술협회) 표준화 논문 우수상 (<span>TTA</span> 사무총장 표창)</p>"
+     p[8] = "<p>2005.10 <span>KSA</span> (한국표준협회) 표준화 논문 우수상 (산업자원부 장관 표창</p>"
+     p[9] = "<p>2005.07 <span>IT</span> 분야 박사후 연수 과정 장학증서 (정보통신부 장관 표창)</p>"
+     p[10] = "<p>2005.01 마르퀴즈 인명 사전 등재<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>(Marquis Who's Who In Science and Engineering)</span></p>"
+     p[11] = "<p>2004.01 <span>ETRI Journal</span>논문 장려상 (<span>ETRI</span> 원장 표창)</p>"
+     if(count == null){
+        count = 1;
+        hi = a.sort();
+        for(i=0; i < hi.length; i++)
+        {document.write(hi[i])}
+         alert(e.type + "되어 거꾸로 정렬되었습니다.")
+     }
+     else{
+         count = null;
+         hi = a.reverse();
+        for(i=0; i < hi.length; i++)
+        {document.write(hi[i])}
+         alert(e.type + "되어 정렬되었습니다.")
+     }
+</script>
+    <!--예제 7.3, 7.4, 9.6 적용 종료 부분-->
 </body>
 
 </html>
